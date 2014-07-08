@@ -15,10 +15,10 @@ week4 = Assignment.create title: "Homework", description: "More Work", assigned:
 week5 = Assignment.create title: "More Homework", description: "Arrrrgh! Suspense", assigned: "2014-07-11", due_date: "2014-07-15"
 
 
-[week1, week2, week3, week4].each do |assignment|
+[week1, week2, week3, week4, week5].each do |assignment|
   User.all.each do |user|
       user.completed_assignments.create(assignment: assignment,
-                                           on_time: [true,false].sample,
+                                          #  on_time: [true,false].sample,
                                            github_url: "the-url")
 
   end
