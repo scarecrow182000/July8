@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
 
-  post 'homework' => "homework#create", as: :homework
+  get "auth/login" => "auth#login", as: "login"
 
   resources :completed_assignments
 
-  root to: "page#show"
+  # root to: "page#show"
+  get "page/show" => "page#show", as: "show"
+  post "auth/verify" => "auth#verify", as: "verify_login"
+  post 'homework' => "homework#create", as: :homework
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,0 +1,21 @@
+<h1>Auth#login</h1>
+
+
+<strong><%= @message %></strong>
+
+
+<!-- <%= form_tag user_sign_in  do %>
+  <div>
+    <%= label_tag "Username" %>
+    <%= username_field_tag :name%>
+  </div>
+<% end %> -->
+<%= form_tag verify_login_path do %>
+  <div>
+    <%= label_tag "Your Password" %>
+    <%= password_field_tag :password%>
+  </div>
+  <div>
+    <%= submit_tag "Go!" %>
+  </div>
+<% end %>
