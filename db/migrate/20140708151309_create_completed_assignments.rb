@@ -1,8 +1,8 @@
 class CreateCompletedAssignments < ActiveRecord::Migration
   def change
     create_table :completed_assignments do |t|
-      t.refrences :user, index: true
-      t.refrences :assignment, index: true
+      t.references :user, index: true
+      t.references :assignment, index: true
       t.boolean :on_time
       t.string :github_url
 
