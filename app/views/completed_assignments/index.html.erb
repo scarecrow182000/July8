@@ -14,8 +14,8 @@
   <tbody>
     <% @completed_assignments.each do |completed_assignment| %>
       <tr>
-        <td><%= completed_assignment.user %></td>
-        <td><%= completed_assignment.assignment %></td>
+        <td><%= completed_assignment.user.name %></td>
+        <td><%= completed_assignment.assignment.title %></td>
         <td><%= completed_assignment.on_time %></td>
         <td><%= completed_assignment.github_url %></td>
         <td><%= link_to 'Show', completed_assignment %></td>
